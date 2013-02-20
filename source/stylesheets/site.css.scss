@@ -107,12 +107,9 @@ a {
 	}
 } 
 
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 510px) {
-/* Styles */
+@media only screen and (min-device-width : 520px) {
 	.video{
-		height: 400px;
+		height: 400px !important;
 		width: 500px;
 	}
 }

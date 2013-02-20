@@ -104,47 +104,45 @@ a {
     color: #999999;
     text-shadow: none; }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 510px) {
-  /* Styles */
-  /* line 114, site.css.scss */
+@media only screen and (min-device-width: 520px) {
+  /* line 111, site.css.scss */
   .video {
-    height: 400px;
+    height: 400px !important;
     width: 500px; } }
-/* line 120, site.css.scss */
+/* line 117, site.css.scss */
 .optier-header {
   padding-top: 20px;
   height: auto; }
 
-/* line 124, site.css.scss */
+/* line 121, site.css.scss */
 .optier-icons {
   text-decoration: none !important; }
-  /* line 128, site.css.scss */
+  /* line 125, site.css.scss */
   .optier-icons .ui-btn-inner {
     padding-top: 0 !important;
     padding-bottom: 0 !important; }
-    /* line 131, site.css.scss */
+    /* line 128, site.css.scss */
     .optier-icons .ui-btn-inner > div {
       background-repeat: no-repeat;
       background-size: 100% 100%;
       width: 32px;
       height: 32px;
       margin: 0 auto; }
-      /* line 137, site.css.scss */
+      /* line 134, site.css.scss */
       .optier-icons .ui-btn-inner > div:hover {
         text-decoration: none; }
-    /* line 141, site.css.scss */
+    /* line 138, site.css.scss */
     .optier-icons .ui-btn-inner .home {
       background-image: url(../images/footer4/home.png); }
-    /* line 144, site.css.scss */
+    /* line 141, site.css.scss */
     .optier-icons .ui-btn-inner .twitter {
       background-image: url(../images/footer4/twitter.png); }
-    /* line 147, site.css.scss */
+    /* line 144, site.css.scss */
     .optier-icons .ui-btn-inner .linkedin {
       background-image: url(../images/footer4/linkedin.png); }
-    /* line 150, site.css.scss */
+    /* line 147, site.css.scss */
     .optier-icons .ui-btn-inner .youtube {
       background-image: url(../images/footer4/youtube.png); }
-    /* line 153, site.css.scss */
+    /* line 150, site.css.scss */
     .optier-icons .ui-btn-inner .blog {
       background-image: url(../images/footer4/rss.png); }
