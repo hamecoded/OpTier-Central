@@ -93,10 +93,11 @@ a {
 	}
 	
 }
-
-.container{
-	
-	margin: 20px auto;
+.container{	
+	margin: 10px auto 10px auto;
+	&.products-list{
+		margin: 30px auto 0px auto;	
+	}
 	p{
 		font-family: 'Droid Sans',sans-serif;
 		font-size: 14px;
@@ -106,7 +107,20 @@ a {
 	}
 } 
 
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 510px) {
+/* Styles */
+	.video{
+		height: 400px;
+		width: 500px;
+	}
+}
 
+.optier-header{
+	padding-top:20px;
+	height: auto;
+}
 .optier-icons{
 	
 	text-decoration: none !important;

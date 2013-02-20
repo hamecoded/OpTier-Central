@@ -90,10 +90,13 @@ a {
     background-image: linear-gradient(#5393c5, #6facd5);
     font-family: Helvetica,Arial,sans-serif; }
 
-/* line 97, site.css.scss */
+/* line 96, site.css.scss */
 .container {
-  margin: 20px auto; }
-  /* line 100, site.css.scss */
+  margin: 10px auto 10px auto; }
+  /* line 98, site.css.scss */
+  .container.products-list {
+    margin: 30px auto 0px auto; }
+  /* line 101, site.css.scss */
   .container p {
     font-family: 'Droid Sans',sans-serif;
     font-size: 14px;
@@ -101,35 +104,47 @@ a {
     color: #999999;
     text-shadow: none; }
 
-/* line 110, site.css.scss */
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 510px) {
+  /* Styles */
+  /* line 114, site.css.scss */
+  .video {
+    height: 400px;
+    width: 500px; } }
+/* line 120, site.css.scss */
+.optier-header {
+  padding-top: 20px;
+  height: auto; }
+
+/* line 124, site.css.scss */
 .optier-icons {
   text-decoration: none !important; }
-  /* line 114, site.css.scss */
+  /* line 128, site.css.scss */
   .optier-icons .ui-btn-inner {
     padding-top: 0 !important;
     padding-bottom: 0 !important; }
-    /* line 117, site.css.scss */
+    /* line 131, site.css.scss */
     .optier-icons .ui-btn-inner > div {
       background-repeat: no-repeat;
       background-size: 100% 100%;
       width: 32px;
       height: 32px;
       margin: 0 auto; }
-      /* line 123, site.css.scss */
+      /* line 137, site.css.scss */
       .optier-icons .ui-btn-inner > div:hover {
         text-decoration: none; }
-    /* line 127, site.css.scss */
+    /* line 141, site.css.scss */
     .optier-icons .ui-btn-inner .home {
       background-image: url(../images/footer4/home.png); }
-    /* line 130, site.css.scss */
+    /* line 144, site.css.scss */
     .optier-icons .ui-btn-inner .twitter {
       background-image: url(../images/footer4/twitter.png); }
-    /* line 133, site.css.scss */
+    /* line 147, site.css.scss */
     .optier-icons .ui-btn-inner .linkedin {
       background-image: url(../images/footer4/linkedin.png); }
-    /* line 136, site.css.scss */
+    /* line 150, site.css.scss */
     .optier-icons .ui-btn-inner .youtube {
       background-image: url(../images/footer4/youtube.png); }
-    /* line 139, site.css.scss */
+    /* line 153, site.css.scss */
     .optier-icons .ui-btn-inner .blog {
       background-image: url(../images/footer4/rss.png); }
