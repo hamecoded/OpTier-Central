@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="themes/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css"> 
+  </head>
+  
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <div>
+            <img src="logo.png"> 
+          </div>
+          <a class="brand" href="#512339b33723a40862002074"></a>
+          <div class="navbar-content">
+            <ul class="nav "></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row main-features">
+        <div class="span4">
+          <div class="well">
+            <h2>OpTier Big Data Analytics</h2>
+            <a class="btn btn-success" href="#"><span class="btn-label">Find Out More</span></a> 
+          </div>
+        </div>
+        <div class="span4">
+          <div class="well">
+            <h2>OpTier APM</h2>
+            <h4 style="box-sizing: border-box; margin-top: 30px; margin-bottom: 14px; padding: 0px; font-size: 23px; line-height: 1.1; font-family: Arial, sans-serif; font-weight: 300; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); text-align: center;"></h4>
+            <a class="btn btn-success" href="#"><span class="btn-label">Find Out More</span></a> 
+          </div>
+        </div>
+        <div class="span4">
+          <div class="well">
+            <h2>OpTier APM SaaS Solution</h2>
+            <p>
+              <br> 
+            </p>
+            <a class="btn btn-success" href="#"><span class="btn-label">Find Out More</span></a> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

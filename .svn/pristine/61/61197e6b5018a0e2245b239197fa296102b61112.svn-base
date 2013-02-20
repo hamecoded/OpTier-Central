@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>bda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="themes/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css"> 
+  </head>
+  
+  <body>
+    <div class="container">
+      <a class="btn btn-success" href="#"><span class="btn-label">Back</span></a>
+      <br>
+      <br>
+      <p>While big data promises to deliver competitive advantage to the companies
+        that learn how to use it effectively, the truth is many firms are struggling
+        to realize the benefits in real life.
+        <br>
+        <br> This research paper examines the sources of big data from transactions
+        to social media and provides recommendations on how to integrate multiple,
+        distributed sources into one big data model that can be used by business
+        users for fast and flexible analysis. Several methodologies for creating
+        context are examined, with the pros and cons of each explored.
+        <br>
+        <br> Solve the complexity problem and start getting the most of big data.</p>
+    </div>
+    <div>
+      <iframe width="420" height="345" src="http://www.youtube.com/embed/nNzD02-wY1A"></iframe>
+    </div>
+  </body>
+
+</html>
