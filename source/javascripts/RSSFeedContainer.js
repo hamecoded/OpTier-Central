@@ -11,6 +11,7 @@ var RSSFeedContainer = function (type, container) {
 	this.template = Handlebars.compile(source);
 
 	this.numUnread = 0;
+	
 }
 
 RSSFeedContainer.prototype = {
@@ -20,8 +21,12 @@ RSSFeedContainer.prototype = {
  		thi$.numUnread = 0;
 
 		$.each( feed.entries, function( key, value ) {
-		  	var feedDate = value.publishedDate;
-			var id  = new Date(feedDate).getTime();
+			var id, feedDate = value.publishedDate;
+			if(feedDate != ""){
+			    id  = new Date(feedDate).getTime();
+			}else{
+			    id  = value.link;
+			}
 
 			if(typeof(Storage)!=="undefined")
 				{									
@@ -36,7 +41,12 @@ RSSFeedContainer.prototype = {
 				}
 
 		}); 
-		$("#" + thi$.type + "-unread").html(thi$.numUnread);
+
+
+		var comments = $("#" + thi$.type + "-unread");
+		comments.html( thi$.numUnread );	
+
+		
 	},
 
 
@@ -71,8 +81,12 @@ RSSFeedContainer.prototype = {
 			thi$.container.append( thi$.template(thi$.feed) );
 
 			$(".rss-container ul li:not('.hidden')").on("click", function(event) {
-				var feedDate = $(this).data("feeddate");
-				var id  = new Date(feedDate).getTime();
+				var id, feedDate = $(this).data("feeddate");
+				if(feedDate != ""){
+				    id  = new Date(feedDate).getTime();      
+				}else{
+				    id  = $(this).data("feedid");
+				}
 				
 				if(typeof(Storage)!=="undefined") {
 					if(localStorage[id] == 1){
@@ -83,6 +97,7 @@ RSSFeedContainer.prototype = {
 					}
 					
 				}
+
 				$("#" + thi$.type + "-unread").html(thi$.numUnread);
 				//expand collapse
 				$(".rss-container ul li:not('.hidden')").removeClass("show");
@@ -101,9 +116,12 @@ RSSFeedContainer.prototype = {
 				thi$.url = 'http://www.linkedin.com/rss/nus?key=WhjzfiEewQ2qrnoEyOkma479eb0yRdY7EuwBxi6RremAaY7KBmy394ZUfVuhXxXC7pY'; //optier liron
 				thi$.url = 'http://www.linkedin.com/rss/nus?key=tLJNUGbKw896RLjhb3nDKCRswYfy2UUrOjknlFzsS-lAcW5JkZyY4KPeWHRHGE0m-hE'; //nadav
 				break;
-			case "facebook": 
-				thi$.url = 'facebook.com';
-				break;
+			case "youtube": 
+				thi$.url = 'http://www.youtube.com/rss/user/OpTier01/videos.rss';
+	            break;
+	        case "blog": 
+	            thi$.url = 'http://www.optier.com/blog/?feed=rss';
+	            break;
 		}
 		thi$._getFeeds(10, thi$.render);
 	}
