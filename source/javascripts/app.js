@@ -13,3 +13,5 @@
 
 var twitter = new RSSFeedContainer("twitter", $("#twitter-container"))
     	.fetch();
+var linkedin = new RSSFeedContainer("linkedin", $("#linkedin-container"))
+    	.fetch();

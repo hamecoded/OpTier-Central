@@ -18,14 +18,15 @@ RSSFeedContainer.prototype = {
 	_getFeeds: function (numFeeds, callback) {
         var thi$ = this;
         $.ajax({
-          url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=' + numFeeds +'&callback=?&q=' + encodeURIComponent(thi$.url),
-          dataType: 'json',
+			url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=' + numFeeds +'&callback=?&q=' + encodeURIComponent(thi$.url),
+			dataType: 'jsonp',
+			type: 'GET',
+			timeout: 5000,
+			async: false,
+			// xhrFields: {
+			// 	withCredentials: true
+			// },
           success: function(data) {
-            // var source   = $("#rssTmp").html();
-            // var template = Handlebars.compile(source);
-            // $("#feedContent").append(template(data.responseData.feed.entries[0]));
-            // var feed = new RSSFeedContainer(data, "twitter");
-            // feed.render($("#feedContent"));
             thi$.feed = data.responseData.feed;
             // thi$.title = data.responseData.feed.title;
             // thi$.entries = data.responseData.feed.entries;
@@ -44,21 +45,9 @@ RSSFeedContainer.prototype = {
 			var thi$ = this;
 			thi$.container.append( thi$.template(thi$.feed) );
 
-			// $(".feed-item").on("click", function(event) {
-   //              alert(event);
-   //          });  
-
-			$("ul li:not('.hidden')").on("click", function(event) {
-            	//alert(event);
-
-            	alert($(event.currentTarget).data("feeddate"));
-            });  
-
-			// thi$.container.append("<H2>" + thi$.title + "</H2>");
-			// $(thi$.entries).each(function(index, feedData){
-			// 	//DOM 
-			// 	thi$.container.append( thi$.template(feedData) );					
-			// });		
+			$(".rss-container ul li:not('.hidden')").on("click", function(event) {
+            	alert("item click: " + $(this).data("feeddate"));
+            });  	
 	},
 
 	fetch: function() {
