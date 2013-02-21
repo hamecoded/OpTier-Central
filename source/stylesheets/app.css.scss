@@ -7,6 +7,46 @@
 
 @import "add2home";
 
+ul{
+	.feed-item{
+		overflow: hidden;
+		&.read{
+			position: relative;
+			&::after{
+				content: "✓";
+				text-align: center;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				color: white;
+				background-color: green;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+			}
+		}
+		.extra{
+			display: none;
+		}
+		&.show{
+			.extra{
+				display: inline-block;
+			}
+		}	
+	}
+}
+
+.num-unread{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	color: white;
+	background-color: green;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+
 .hidden{display: none;}
 .rss-container{
 	ul{
@@ -17,7 +57,8 @@
 			padding: 16px;
 			cursor: pointer;
 			h5{
-				color: #444;
+				color: #ccc;
+				text-shadow: none;
 			}
 
 		}
