@@ -11,7 +11,13 @@
 //=require RSSFeedContainer
 
 
-var twitter = new RSSFeedContainer("twitter", $("#twitter-container"))
-    	.fetch();
-var linkedin = new RSSFeedContainer("linkedin", $("#linkedin-container"))
-    	.fetch();
+//$(document).ready(function(){
+$(document).delegate('.ui-page', 'pageshow', function () {
+    //Your code for each page load here
+	var linkedin = new RSSFeedContainer("linkedin", $("#linkedin-container"))
+				.fetch();
+
+	var twitter = new RSSFeedContainer("twitter", $("#twitter-container"))
+	     		.fetch();
+	
+});
