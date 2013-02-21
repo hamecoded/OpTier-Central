@@ -10,14 +10,22 @@
 
 //=require RSSFeedContainer
 
-
-//$(document).ready(function(){
 $(document).delegate('.ui-page', 'pageshow', function () {
-    //Your code for each page load here
-	var linkedin = new RSSFeedContainer("linkedin", $("#linkedin-container"))
-				.fetch();
+			linkedin = new RSSFeedContainer("linkedin", $("#linkedin-container"));
+			linkedin.fetch();
+			twitter = new RSSFeedContainer("twitter", $("#twitter-container"));
+			twitter.fetch();
 
-	var twitter = new RSSFeedContainer("twitter", $("#twitter-container"))
-	     		.fetch();
+/*	switch(this.id){
+		case "linkedin":
+			linkedin = new RSSFeedContainer("linkedin", $("#linkedin-container"));
+			linkedin.fetch();
+			break;
+		case "twitter":
+			twitter = new RSSFeedContainer("twitter", $("#twitter-container"));
+			twitter.fetch();
+			break;
+	}*/
+
 	
 });

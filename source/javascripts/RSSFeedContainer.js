@@ -9,11 +9,36 @@ var RSSFeedContainer = function (type, container) {
 	this.url = "";
 	var source   = $("#rssTmp").html();
 	this.template = Handlebars.compile(source);
-	// this.entries = raw.responseData.feed.entries;
-	// this.numFeeds = this.entries.length;
+
+	this.numUnread = 0;
 }
 
 RSSFeedContainer.prototype = {
+
+	_processFeeds: function(feed){
+ 		var thi$ = this;
+ 		thi$.numUnread = 0;
+
+		$.each( feed.entries, function( key, value ) {
+		  	var feedDate = value.publishedDate;
+			var id  = new Date(feedDate).getTime();
+
+			if(typeof(Storage)!=="undefined")
+				{									
+					if(localStorage[id] == 1){
+						//read
+						value.read = true;
+					}else{
+						value.read = false;
+						 thi$.numUnread++;
+					}
+
+				}
+
+		}); 
+		$("#" + thi$.type + "-unread").html(thi$.numUnread);
+	},
+
 
 	_getFeeds: function (numFeeds, callback) {
         var thi$ = this;
@@ -28,8 +53,8 @@ RSSFeedContainer.prototype = {
 			// },
           success: function(data) {
             thi$.feed = data.responseData.feed;
-            // thi$.title = data.responseData.feed.title;
-            // thi$.entries = data.responseData.feed.entries;
+			thi$._processFeeds(thi$.feed);
+
             if (callback) {
 				callback.call(thi$);
             }
@@ -46,8 +71,24 @@ RSSFeedContainer.prototype = {
 			thi$.container.append( thi$.template(thi$.feed) );
 
 			$(".rss-container ul li:not('.hidden')").on("click", function(event) {
-            	alert("item click: " + $(this).data("feeddate"));
-            });  	
+				var feedDate = $(this).data("feeddate");
+				var id  = new Date(feedDate).getTime();
+				
+				if(typeof(Storage)!=="undefined") {
+					if(localStorage[id] == 1){
+
+					}else{
+						localStorage[id] = 1;	
+						thi$.numUnread--;
+					}
+					
+				}
+				$("#" + thi$.type + "-unread").html(thi$.numUnread);
+				//expand collapse
+				$(".rss-container ul li:not('.hidden')").removeClass("show");
+				$(this).addClass("read show");   
+
+			});  	
 	},
 
 	fetch: function() {
