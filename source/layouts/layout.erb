@@ -82,13 +82,11 @@
 
 
           <script id="rssTmp" type="text/x-handlebars-template">
-            <H2>{{title}}</H2>
-            <H5>{{description}}</H5>
             <ul>
             {{#entries}}
             <li style="border:1px solid black" data-feedId="{{link}}" data-feedDate="{{publishedDate}}">
               <div>
-                <H4>{{title}}</H4>
+                <H4>{{{title}}}</H4>
                 <H5>{{publishedDate}}</H5>
               </div>  
               <div class="hidden">

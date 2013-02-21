@@ -9,3 +9,7 @@
 
 
 //=require RSSFeedContainer
+
+
+var twitter = new RSSFeedContainer("twitter", $("#twitter-container"))
+    	.fetch();

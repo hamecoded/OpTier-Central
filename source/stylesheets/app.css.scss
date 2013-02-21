@@ -8,7 +8,17 @@
 @import "add2home";
 
 .hidden{display: none;}
+.rss-container{
+	ul{
+		list-style: none;
+		margin: 0;
+		li{
+			margin: 4px 0;
+			padding: 16px;
 
+		}
+	}
+}
 
 /*
 $link-color:         #0388a6;
