@@ -57,8 +57,8 @@ RSSFeedContainer.prototype = {
 				thi$.url = 'http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=optier';
 				break;
 			case "linkedin": 
-				// thi$.url = 'http://www.linkedin.com/rss/nus?key=WhjzfiEewQ2qrnoEyOkma479eb0yRdY7EuwBxi6RremAaY7KBmy394ZUfVuhXxXC7pY';
-				thi$.url = 'http://www.linkedin.com/rss/nus?key=tLJNUGbKw896RLjhb3nDKCRswYfy2UUrOjknlFzsS-lAcW5JkZyY4KPeWHRHGE0m-hE';
+				thi$.url = 'http://www.linkedin.com/rss/nus?key=WhjzfiEewQ2qrnoEyOkma479eb0yRdY7EuwBxi6RremAaY7KBmy394ZUfVuhXxXC7pY'; //optier liron
+				thi$.url = 'http://www.linkedin.com/rss/nus?key=tLJNUGbKw896RLjhb3nDKCRswYfy2UUrOjknlFzsS-lAcW5JkZyY4KPeWHRHGE0m-hE'; //nadav
 				break;
 			case "facebook": 
 				thi$.url = 'facebook.com';

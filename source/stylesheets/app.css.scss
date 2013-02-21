@@ -15,6 +15,10 @@
 		li{
 			margin: 4px 0;
 			padding: 16px;
+			cursor: pointer;
+			h5{
+				color: #444;
+			}
 
 		}
 	}
@@ -155,6 +159,7 @@ a {
 				text-decoration: none;
 			}
 		}
+	
 		.home{
 			background-image: url(../images/footer4/home.png);
 		}
