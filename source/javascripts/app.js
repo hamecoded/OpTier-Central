@@ -10,7 +10,6 @@
 //=require RSSFeedContainer
 
 $(document).delegate('.ui-page', 'pageshow', function () {
-	debugger;
 	$("#footer-list .optier-icons").removeClass('ui-btn-up-b').addClass('ui-btn-up-a');
 	$("#footer-list .optier-icons." + this.id).removeClass('ui-btn-up-a').addClass('ui-btn-up-b');
 	linkedin = new RSSFeedContainer("linkedin", $("#linkedin-container"));
