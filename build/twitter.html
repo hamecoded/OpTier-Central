@@ -16,19 +16,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple/72_72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple/114_114.png">
 
-    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon">   
 
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-    <link rel="stylesheet" href="themes/cyborg/bootstrap.min.css">
-    <link rel="stylesheet" href="themes/cyborg/bootstrap-responsive.css">
-
-    <link rel="stylesheet" href="vendor/add2home/add2home.css">  
-    <script src="vendor/add2home/add2home.js"></script>
-
-    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-
-    <link href="stylesheets/site.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/app.css?1361438899" media="screen" rel="stylesheet" type="text/css" />
 
       <title>OpTier Central</title>
 
@@ -47,10 +37,16 @@
 
 
 <div data-role="content">
- 	<div class="container">
-       <h2>Coming Soon...</h2>
-     </div>
+ 	<div id="twitter-container" class="container">
+      
+    </div>
 </div><!-- /content -->
+
+
+<script>
+	//var twitter = new RSSFeedContainer("twitter", $("#twitter-container"))
+    //	.fetch();
+</script>
 
 
 
@@ -99,8 +95,33 @@
             </a></li>
           </ul>
         </div><!-- /navbar -->
+
+
+          <script id="rssTmp" type="text/x-handlebars-template">
+            <H2>{{title}}</H2>
+            <H5>{{description}}</H5>
+            <ul>
+            {{#entries}}
+            <li style="border:1px solid black" data-feedId="{{link}}" data-feedDate="{{publishedDate}}">
+              <div>
+                <H4>{{title}}</H4>
+                <H5>{{publishedDate}}</H5>
+              </div>  
+              <div class="hidden">
+                <H5>{{content}}</H5>
+                <a href='{{link}}'>{{link}}</a>
+              </div>  
+            </li>
+            {{/entries}}
+            </ul>
+          </script>
+
       </div>
     </div>
+
+
+
+    <script src="javascripts/app.js?1361438893" type="text/javascript"></script>
   </body>
 
 </html>

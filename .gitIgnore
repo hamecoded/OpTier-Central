@@ -1,4 +1,5 @@
 .sass-cache
 *.swp
 .DS_Store
-.svn/*
+.svn
+RSS-project
