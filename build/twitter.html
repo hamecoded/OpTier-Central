@@ -18,7 +18,7 @@
 
     <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon">   
 
-    <link href="stylesheets/app.css?1361438899" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/app.css?1361440612" media="screen" rel="stylesheet" type="text/css" />
 
       <title>OpTier Central</title>
 
@@ -37,17 +37,10 @@
 
 
 <div data-role="content">
- 	<div id="twitter-container" class="container">
+ 	<div id="twitter-container" class="container rss-container">
       
     </div>
 </div><!-- /content -->
-
-
-<script>
-	//var twitter = new RSSFeedContainer("twitter", $("#twitter-container"))
-    //	.fetch();
-</script>
-
 
 
       <div data-role="footer" data-id="foo1" data-position="fixed" class="optier-footer ui-footer ui-bar-a ui-footer-fixed slideup" role="contentinfo">
@@ -98,13 +91,11 @@
 
 
           <script id="rssTmp" type="text/x-handlebars-template">
-            <H2>{{title}}</H2>
-            <H5>{{description}}</H5>
             <ul>
             {{#entries}}
             <li style="border:1px solid black" data-feedId="{{link}}" data-feedDate="{{publishedDate}}">
               <div>
-                <H4>{{title}}</H4>
+                <H4>{{{title}}}</H4>
                 <H5>{{publishedDate}}</H5>
               </div>  
               <div class="hidden">
@@ -121,7 +112,7 @@
 
 
 
-    <script src="javascripts/app.js?1361438893" type="text/javascript"></script>
+    <script src="javascripts/app.js?1361440606" type="text/javascript"></script>
   </body>
 
 </html>
