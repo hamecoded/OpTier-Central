@@ -17,7 +17,7 @@ ul{
 				text-align: center;
 				width: 20px;
 				height: 20px;
-				border-radius: 50%;
+				@include border-radius(50%);
 				color: white;
 				background-color: green;
 				position: absolute;
@@ -39,7 +39,7 @@ ul{
 .num-unread{
 	width: 20px;
 	height: 20px;
-	border-radius: 50%;
+	@include border-radius(50%);
 	color: white;
 	background-color: green;
 	position: absolute;
