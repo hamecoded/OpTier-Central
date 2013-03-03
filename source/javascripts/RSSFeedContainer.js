@@ -80,7 +80,7 @@ RSSFeedContainer.prototype = {
 			var thi$ = this;
 			thi$.container.append( thi$.template(thi$.feed) );
 
-			$(".rss-container ul li:not('.hidden')").on("click", function(event) {
+			$(".rss-container ul li:not('.hidden')").on("click touchstart", function(event) {
 				var id, feedDate = $(this).data("feeddate");
 				if(feedDate != ""){
 				    id  = new Date(feedDate).getTime();      
@@ -100,7 +100,7 @@ RSSFeedContainer.prototype = {
 
 				$("#" + thi$.type + "-unread").html(thi$.numUnread);
 				//expand collapse
-				
+				alert($(this).hasClass("show"));
 				if($(this).hasClass("show")){
 					$(".rss-container ul li:not('.hidden')").removeClass("show");
 				}else{
