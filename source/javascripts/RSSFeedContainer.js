@@ -80,7 +80,7 @@ RSSFeedContainer.prototype = {
 			var thi$ = this;
 			thi$.container.append( thi$.template(thi$.feed) );
 
-			$(".rss-container ul li:not('.hidden')").on("click", function(event) {
+			$(".rss-container ul li:not('.hidden')").on("click touchstart", function(event) {
 				var id, feedDate = $(this).data("feeddate");
 				if(feedDate != ""){
 				    id  = new Date(feedDate).getTime();      
