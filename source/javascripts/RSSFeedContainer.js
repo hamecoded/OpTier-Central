@@ -100,8 +100,13 @@ RSSFeedContainer.prototype = {
 
 				$("#" + thi$.type + "-unread").html(thi$.numUnread);
 				//expand collapse
-				$(".rss-container ul li:not('.hidden')").removeClass("show");
-				$(this).addClass("read show");   
+				
+				if($(this).hasClass("show")){
+					$(".rss-container ul li:not('.hidden')").removeClass("show");
+				}else{
+					$(".rss-container ul li:not('.hidden')").removeClass("show");
+					$(this).addClass("read show");   					
+				}  
 
 			});  	
 	},
